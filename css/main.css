@@ -1,0 +1,410 @@
+/*=============================================================
+|                      DEFINDING
+=============================================================*/
+:root {
+    --green: #72AF52;
+    --lightBlue: #3EB3C5;
+    --darkBlue: #096E7E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 500vh;
+    background-color: #f6f6f6;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+/*=============================================================
+|                      BUTTON
+=============================================================*/
+
+/*# start hamburger menu icon */
+
+.menu-toggle {
+    position: relative;
+    display: none;
+    /* Big Screen */
+    width: 30px;
+    height: 26px;
+    background: transparent;
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    color: #3EB3C5;
+    font-size: 0;
+    transition: all 0.25s ease-in-out;
+}
+
+@media screen and (max-width: 991px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        padding-bottom: 50px;
+    }
+
+    #navigationBar .navbar-collapse ul li a {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #navigationBar .navbar-nav .centerBtn {
+        margin: 0 auto;
+    }
+
+    .w50 {
+        margin: 0 auto;
+        width: 50px;
+    }
+
+}
+
+.menu-toggle:before,
+.menu-toggle:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: currentColor;
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s ease-in-out;
+}
+
+button:hover {
+    color: #3EB3C5;
+}
+
+button.is-active {
+    border-color: transparent;
+}
+
+button.is-active:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+button.is-active:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/*# end hamburger menu icon */
+
+.btn-primary {
+    background-color: #3EB3C5 !important;
+    border-color: #3EB3C5 !important;
+    border: 2px solid #3EB3C5 !important;
+    transition: .5s ease;
+
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    color: #3EB3C5 !important;
+    background: none !important;
+    border: 2px solid #3EB3C5 !important;
+}
+
+.btn-rounded {
+    border-radius: 100px;
+}
+
+/*=============================================================
+|                      NAVBAR
+=============================================================*/
+.sticky {
+    transition: .5s ease;
+}
+
+.nav-sticky {
+    background: #ffffff;
+}
+
+#navigationBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 99;
+}
+
+#navigationBar .navbar-brand img {
+    margin-right: 50px;
+}
+
+.active {
+    color: var(--lightBlue) !important;
+}
+
+#navigationBar ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    transition: .5s ease;
+}
+
+#navigationBar ul li a:hover,
+#navigationBar ul li a:focus,
+#navigationBar ul li a:active {
+    color: var(--lightBlue);
+}
+
+/*=============================================================
+|                      HOME
+=============================================================*/
+#home .container-outer {
+    height: 100vh;
+    background-image: url('/img/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#home .container-inner {
+    display: table;
+    height: 100vh;
+}
+
+#home .container-outer .container-inner .text,
+.phone {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#home .container-outer .container-inner .text h1 {
+    font-size: 58px;
+    color: var(--darkBlue);
+    font-weight: 700;
+}
+
+#home .container-outer .container-inner .text p {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+#home .container-outer .container-inner .text a img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/*=============================================================
+|                      TOPIC
+=============================================================*/
+.text-center {
+    margin-bottom: 8px !important;
+}
+
+.title {
+    text-align: center;
+    margin: 50px 0;
+}
+
+#topic .card a {
+    text-decoration: none;
+    color: #000;
+}
+
+#topic .card .card-body p img {
+    height: 50px;
+}
+
+#topic .card,
+#activeMentors .card {
+    border-radius: 13px !important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: .5s ease;
+}
+
+#topic .card:hover {
+    transform: translateY(-15px);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/*=============================================================
+|                      MORE IN APP
+=============================================================*/
+.margin-top {
+    margin-top: 100px;
+}
+
+#moreInApp .android,
+.ios {
+    border: 1px solid #000;
+    background: #fff;
+    padding: 5px 20px;
+    border-radius: 30px;
+    margin-right: 10px;
+    transition: .5s ease;
+}
+
+#moreInApp .android b,
+.ios b {
+    font-size: 28px;
+}
+
+#moreInApp .android:hover {
+    background: #000;
+    color: #fff;
+}
+
+#moreInApp .ios:hover {
+    background: #000;
+    color: #fff;
+}
+
+#moreInApp .flipped img {
+    transform: scaleX(-1);
+}
+
+#moreInApp a {
+    color: #000;
+    text-decoration: none;
+}
+
+/*=============================================================
+|                      ACTIVE MENTORS
+=============================================================*/
+#activeMentors p img {
+    border-radius: 50%;
+    height: 60px;
+}
+
+#activeMentors .btn-primary {
+    background: #fff !important;
+    color: #3EB3C5;
+    border: #3EB3C5;
+    float: right;
+}
+
+#activeMentors .btn-primary:hover {
+    background: #3EB3C5 !important;
+    color: #fff !important;
+}
+/*=============================================================
+|                      TESTIMONIALS
+=============================================================*/
+
+/*=============================================================
+|                      DOWNLOAD MENTOR
+=============================================================*/
+#downloadMentor .green{
+    color: #3CD482;
+}
+#downloadMentor .card{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(11,63,88,1) 100%, rgba(0,212,255,1) 100%);
+    border-radius: 16px;
+}
+#downloadMentor .card a {
+    text-decoration: none;
+    color: #fff;
+}
+#downloadMentor .card p i{
+    font-size: 50px;
+}
+#downloadMentor .black{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(48,48,48,1) 100%, rgba(0,212,255,1) 100%);
+    border-radius: 16px;
+}
+/*=============================================================
+|                      FOOTER
+=============================================================*/
+#footer .footer{
+    margin-top: 200px;
+    text-align: center;
+    background: #096E7E;
+    width: 100%;
+    color: #fff;
+    padding: 50px 0;
+}
+#footer .footer img{
+    height: 120px;
+}
+#footer .footer h4{
+    margin: 20px 0;
+}
+#footer .footer p{
+    margin: 20px 0;
+    font-size: 20px;
+}
+#footer .footer input{
+    margin: 20px 0;
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: .5s ease;
+}
+#footer .footer input[type="text"]{
+    color: #fff;
+    background: #096E7E;
+    width: 340px;
+    height: 60px;
+    border: none;
+    outline: 1px solid #fff;
+    padding: 0 25px;
+    border-radius: 5px 0 0 5px;
+}
+#footer .footer ::-webkit-input-placeholder{
+    color: #fff;
+}
+#footer .footer input[type="submit"]{
+    left: -5px;
+    position: relative;
+    outline: 1px solid #fff;
+    border-radius: 0 5px 5px 0;
+    width: 150px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    background: var(--lightBlue);
+    color: #fff;
+    text-transform: uppercase;
+}
+#footer .footer .social-media{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+#footer .footer span{
+    font-size: 18px;
+}
+#footer .footer .social-media a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+#footer .footer .social-media a i{
+    font-size: 24px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+#footer .footer .social-media a .fa-facebook{
+    padding: 10px 15px;
+}
+#footer .footer .social-media a .fa-linkedin{
+    padding: 10px 12px;
+}
+#footer .footer .social-media a .fa-twitter, .fa-dribbble{
+    padding: 10px 10px;
+}
+#footer .footer .social-media a .fa-instagram{
+    padding: 8px 10px;
+}
